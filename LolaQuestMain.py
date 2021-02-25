@@ -11,7 +11,7 @@ def combat(enemy):
     print("Enemy has " + str(enemy.health) + " health points, and deals " + str(enemy.damage) + " per turn.")
     print("" )
     while lola.health > 0 and enemy.health > 0:
-        user_choice = raw_input("What will Lola do? Options: attack, ability, dodge, run, ")
+        user_choice = input("What will Lola do? Options: attack, ability, dodge, run, ")
         if user_choice.lower().strip(" ") == "attack":
             enemy.health += (-1 * lola.damage) - enemy.armor
             print(" ")
@@ -101,7 +101,7 @@ def arrival_at_location(location):
     if location == town_square and location.visit_count == 0:
         print(story_element_town_square_aftermath)
     elif lola.in_combat == False:
-        user_choice = raw_input("Your options are...")
+        user_choice = input("Your options are...")
         if user_choice == location.option_1:
             pass
         else:
@@ -263,7 +263,7 @@ story_element_town_square_aftermath = """
 
 print(story_element_game_start)
 
-user_choice = raw_input("Enter \"play\" to continue. ")
+user_choice = input("Enter \"play\" to continue. ")
 if user_choice.lower().strip(" ") == "play":
     print(story_element_lola_awakes)
 
@@ -271,7 +271,7 @@ combat(car_door_goblin_1)
 
 print(story_element_greebo_arrives)
 
-user_choice = raw_input("Enter the town square by typing enter. ")
+user_choice = input("Enter the town square by typing enter. ")
 if user_choice.lower() == "enter":
      pass
 
